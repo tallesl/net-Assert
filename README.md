@@ -63,7 +63,7 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
             return tiles;
 
         default:
-            Throw.IfReachHere();
+            throw new ShouldntReachHereException();
     }
 }
 ```
