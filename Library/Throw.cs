@@ -16,9 +16,10 @@
         /// <param name="obj">Object to check</param>
         /// <param name="name">Variable name to include in the exception message (optional)</param>
         /// <exception cref="ShouldntBeDefaultException">If the given object has the type's default value</exception>
-        public static void IfDefault(object obj, string name = null)
+        public static void IfDefault<T>(T obj, string name = null)
         {
-            if (Default(obj.GetType()).Equals(obj))
+            var @default = Default<T>(obj);
+            if ((@default == null && obj == null) || @default.Equals(obj))
                 throw (name == null ? new ShouldntBeDefaultException() : new ShouldntBeDefaultException(name));
         }
 
@@ -131,9 +132,10 @@
             }
         }
 
-        private static object Default(Type t)
+        private static object Default<T>(T obj)
         {
-            return t.IsValueType ? Activator.CreateInstance(t) : null;
+            var t = obj == null ? typeof(T) : obj.GetType();
+            return t.IsValueType && t != typeof(string) ? Activator.CreateInstance(t) : null;
         }
     }
 }

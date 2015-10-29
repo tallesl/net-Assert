@@ -34,6 +34,13 @@
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ShouldntBeDefaultException))]
+        public void ThrowIfStringDefault()
+        {
+            Throw.IfDefault(default(string));
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(ShouldntBeEmptyException))]
         public void ThrowIfEmpty()
         {
