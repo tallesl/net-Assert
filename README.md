@@ -5,11 +5,6 @@
 
 Little helper on exception throwing.
 
-[build]:     https://ci.appveyor.com/project/TallesL/ThrowIf
-[build-img]: https://ci.appveyor.com/api/projects/status/github/tallesl/ThrowIf
-
-[nuget]:     http://badge.fury.io/nu/ThrowIf
-[nuget-img]: https://badge.fury.io/nu/ThrowIf.png
 
 ## Usage
 
@@ -26,19 +21,13 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 
     if (!tiles.Any())
         throw new ArgumentException("tiles wasn't supposed to be empty");
+    
+    if (!Enum.IsDefined(typeof(Color), value))
+        throw new ArgumentException("invalid color");
 
-    switch (color)
+    foreach (var tile in tiles)
     {
-        case Colors.Blue:
-            PaintInBlue(tiles);
-            return tiles;
-
-        case Colors.Yellow:
-            PaintInYellow(tiles);
-            return tiles;
-
-        default:
-            throw new SystemException("crazy color found: " + color);
+        // Paint the tile
     }
 }
 ```
@@ -51,19 +40,11 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
     Throw.IfDefault(color);
     Throw.IfNull(tiles);
     Throw.IfEmpty(tiles);
+    Throw.IfNotInEnum<Color>(color);
 
-    switch (color)
+    foreach (var tile in tiles)
     {
-        case Colors.Blue:
-            PaintInBlue(tiles);
-            return tiles;
-
-        case Colors.Yellow:
-            PaintInYellow(tiles);
-            return tiles;
-
-        default:
-            throw new ShouldntReachHereException();
+        // Paint the tile
     }
 }
 ```
@@ -75,6 +56,10 @@ Ah, and here's the thing, you aren't supposed to catch those exceptions.
 They are assertions, but unlike with [Debug.Assert], I want my assertions easy to write, turned on when 
 in production, and showing in error logs.
 
+[build]:             https://ci.appveyor.com/project/TallesL/ThrowIf
+[build-img]:         https://ci.appveyor.com/api/projects/status/github/tallesl/ThrowIf
+[nuget]:             http://badge.fury.io/nu/ThrowIf
+[nuget-img]:         https://badge.fury.io/nu/ThrowIf.png
 [default values]:    Library/Throw.cs#L13-L23
 [empty collections]: Library/Throw.cs#L25-L35
 [large collections]: Library/Throw.cs#L37-L53

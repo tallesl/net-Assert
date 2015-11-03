@@ -22,7 +22,7 @@
             Throw.IfEmpty(new[] { 1, 2, 3, });
             Throw.IfLess(3, new[] { 1, 2, 3, });
             Throw.IfMore(3, new[] { 1, 2, 3, });
-            Throw.IfNotDefinedInEnum<Enum>(1);
+            Throw.IfNotInEnum<Enum>(1);
             Throw.IfNull(new object());
         }
 
@@ -63,9 +63,9 @@
 
         [TestMethod]
         [ExpectedException(typeof(ShouldBeInEnumException))]
-        public void ThrowIfNotDefinedInEnum()
+        public void ThrowIfNotInEnum()
         {
-            Throw.IfNotDefinedInEnum<Enum>(4);
+            Throw.IfNotInEnum<Enum>(4);
         }
 
         [TestMethod]
