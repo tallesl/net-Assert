@@ -22,6 +22,7 @@
             Throw.IfEmpty(new[] { 1, 2, 3, });
             Throw.IfLess(3, new[] { 1, 2, 3, });
             Throw.IfMore(3, new[] { 1, 2, 3, });
+            Throw.IfNotIn(3, new[] { 1, 2, 3, });
             Throw.IfNotInEnum<Enum>(1);
             Throw.IfNull(new object());
         }
@@ -59,6 +60,13 @@
         public void ThrowIfMore()
         {
             Throw.IfMore(3, new[] { 1, 2, 3, 4, });
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ShouldBeInCollectionException))]
+        public void ThrowIfNotIn()
+        {
+            Throw.IfNotIn(4, new [] { 1, 2, 3, });
         }
 
         [TestMethod]

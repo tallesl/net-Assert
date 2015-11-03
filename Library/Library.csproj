@@ -35,6 +35,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ShouldBeInCollectionException.cs" />
     <Compile Include="ShouldntBeDefaultException.cs" />
     <Compile Include="ShouldntBeMoreException.cs" />
     <Compile Include="ShouldntBeLessException.cs" />
