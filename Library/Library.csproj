@@ -37,12 +37,16 @@
   <ItemGroup>
     <Compile Include="Exceptions\ShouldBeInCollectionException.cs" />
     <Compile Include="Exceptions\ShouldntBeDefaultException.cs" />
+    <Compile Include="Exceptions\ShouldBeSingleException.cs" />
+    <Compile Include="Exceptions\ShouldntBeSingleException.cs" />
     <Compile Include="Exceptions\ShouldntBeMoreException.cs" />
     <Compile Include="Exceptions\ShouldntBeLessException.cs" />
     <Compile Include="Exceptions\ShouldntBeEmptyException.cs" />
     <Compile Include="Exceptions\ShouldntReachHereException.cs" />
     <Compile Include="Exceptions\ShouldBeInEnumException.cs" />
     <Compile Include="Exceptions\ShouldntBeNullException.cs" />
+    <Compile Include="IfNotSingle.cs" />
+    <Compile Include="IfSingle.cs" />
     <Compile Include="Private\Default.cs" />
     <Compile Include="IfDefault.cs" />
     <Compile Include="IfNull.cs" />

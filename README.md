@@ -49,7 +49,7 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 }
 ```
 
-The helper can check unexpected [default values], [empty]/[large]/[small] collections,
+The helper can check unexpected [default values], [empty]/[large]/[small]/[single]/[not single] collections,
 [enum values], [nulls], and [places reach].
 
 Ah, and here's the thing, you aren't supposed to catch those exceptions.
@@ -64,6 +64,8 @@ in production, and showing in error logs.
 [empty]:          Library/IfEmpty.cs
 [large]:          Library/IfMore.cs
 [small]:          Library/IfLess.cs
+[single]:         Library/IfSingle.cs
+[not single]:     Library/IfNotSingle.cs
 [enum values]:    Library/IfNotInEnum.cs
 [nulls]:          Library/IfNull.cs
 [places reach]:   Library/IfReachHere.cs

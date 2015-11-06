@@ -77,6 +77,13 @@
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ShouldBeSingleException))]
+        public void ThrowIfNotSingle()
+        {
+            Throw.IfNotSingle(new[] { 1, 2, 3, });
+        }
+
+        [TestMethod]
         [ExpectedException(typeof(ShouldntBeNullException))]
         public void ThrowIfNull()
         {
@@ -88,6 +95,13 @@
         public void ThrowIfReachHere()
         {
             Throw.IfReachHere();
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ShouldntBeSingleException))]
+        public void ThrowIfSingle()
+        {
+            Throw.IfSingle(new[] { 1, });
         }
     }
 }
