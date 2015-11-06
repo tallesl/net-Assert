@@ -35,17 +35,28 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ShouldBeInCollectionException.cs" />
-    <Compile Include="ShouldntBeDefaultException.cs" />
-    <Compile Include="ShouldntBeMoreException.cs" />
-    <Compile Include="ShouldntBeLessException.cs" />
-    <Compile Include="ShouldntBeEmptyException.cs" />
-    <Compile Include="ShouldntReachHereException.cs" />
-    <Compile Include="ShouldBeInEnumException.cs" />
-    <Compile Include="ShouldntBeNullException.cs" />
+    <Compile Include="Exceptions\ShouldBeInCollectionException.cs" />
+    <Compile Include="Exceptions\ShouldntBeDefaultException.cs" />
+    <Compile Include="Exceptions\ShouldntBeMoreException.cs" />
+    <Compile Include="Exceptions\ShouldntBeLessException.cs" />
+    <Compile Include="Exceptions\ShouldntBeEmptyException.cs" />
+    <Compile Include="Exceptions\ShouldntReachHereException.cs" />
+    <Compile Include="Exceptions\ShouldBeInEnumException.cs" />
+    <Compile Include="Exceptions\ShouldntBeNullException.cs" />
+    <Compile Include="Private\Default.cs" />
+    <Compile Include="IfDefault.cs" />
+    <Compile Include="IfNull.cs" />
+    <Compile Include="IfReachHere.cs" />
+    <Compile Include="IfNotInEnum.cs" />
+    <Compile Include="Private\Count.cs" />
+    <Compile Include="IfLess.cs" />
+    <Compile Include="IfMore.cs" />
+    <Compile Include="IfNotIn.cs" />
+    <Compile Include="IfEmpty.cs" />
     <Compile Include="Throw.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
