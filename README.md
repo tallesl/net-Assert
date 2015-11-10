@@ -1,10 +1,9 @@
-# ThrowIf
+# Assert
 
 [![][build-img]][build]
 [![][nuget-img]][nuget]
 
-Little helper on exception throwing.
-
+Little helper on assertion.
 
 ## Usage
 
@@ -15,15 +14,15 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 {
     if (color == default(Color))
         throw new ArgumentException("color shouldn't be the default one");
+    
+    if (!Enum.IsDefined(typeof(Color), value))
+        throw new ArgumentException("invalid color");
 
     if (tiles == null)
         throw new ArgumentNullException("tiles");
 
     if (!tiles.Any())
         throw new ArgumentException("tiles wasn't supposed to be empty");
-    
-    if (!Enum.IsDefined(typeof(Color), value))
-        throw new ArgumentException("invalid color");
 
     foreach (var tile in tiles)
     {
@@ -37,10 +36,11 @@ So now I do:
 ```cs
 public Tile[] PaintTiles(Color color, Tile[] tiles)
 {
-    Throw.IfDefault(color);
-    Throw.IfNull(tiles);
-    Throw.IfEmpty(tiles);
-    Throw.IfNotInEnum<Color>(color);
+    AssertThat.IsNotDefault(color);
+    AssertThat.IsInEnum<Color>(color);
+
+    AssertThat.IsNotNull(tiles);
+    AssertThat.HasElements(tiles);
 
     foreach (var tile in tiles)
     {
@@ -49,24 +49,20 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 }
 ```
 
-The helper can check unexpected [default values], [empty]/[large]/[small]/[single]/[not single] collections,
-[enum values], [nulls], and [places reach].
+The helper can check unexpected [nulls], [places reach], [enum values], [default values], and [empty]/[small]/[large]/[single]/[not single] collections.
+They all use [Debug.Assert] under the hood.
 
-Ah, and here's the thing, you aren't supposed to catch those exceptions.
-They are assertions, but unlike with [Debug.Assert], I want my assertions easy to write, turned on when 
-in production, and showing in error logs.
-
-[build]:          https://ci.appveyor.com/project/TallesL/ThrowIf
-[build-img]:      https://ci.appveyor.com/api/projects/status/github/tallesl/ThrowIf
-[nuget]:          http://badge.fury.io/nu/ThrowIf
-[nuget-img]:      https://badge.fury.io/nu/ThrowIf.png
-[default values]: Library/IfDefault.cs
-[empty]:          Library/IfEmpty.cs
-[large]:          Library/IfMore.cs
-[small]:          Library/IfLess.cs
-[single]:         Library/IfSingle.cs
-[not single]:     Library/IfNotSingle.cs
-[enum values]:    Library/IfNotInEnum.cs
-[nulls]:          Library/IfNull.cs
-[places reach]:   Library/IfReachHere.cs
+[build]:          https://ci.appveyor.com/project/TallesL/Assert
+[build-img]:      https://ci.appveyor.com/api/projects/status/github/tallesl/Assert
+[nuget]:          http://badge.fury.io/nu/Assert
+[nuget-img]:      https://badge.fury.io/nu/Assert.png
+[nulls]:          Library/Public%20Methods/IsNotNull.cs
+[places reach]:   Library/Public%20Methods/DoesNotReachHere.cs
+[enum values]:    Library/Public%20Methods/IsInEnum.cs
+[default values]: Library/Public%20Methods/IsNotDefault.cs
+[empty]:          Library/Public%20Methods/HasElements.cs
+[small]:          Library/Public%20Methods/HasLess.cs
+[large]:          Library/Public%20Methods/HasMore.cs
+[single]:         Library/Public%20Methods/IsSingle.cs
+[not single]:     Library/Public%20Methods/IsNotSingle.cs
 [Debug.Assert]:   https://msdn.microsoft.com/library/System.Diagnostics.Debug.Assert
