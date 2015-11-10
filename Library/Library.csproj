@@ -48,7 +48,7 @@
     <Compile Include="Public Methods\IsNotSingle.cs" />
     <Compile Include="Private Methods\Default.cs" />
     <Compile Include="Public Methods\IsNotDefault.cs" />
-    <Compile Include="Public Methods\IsNotNullMessage.cs" />
+    <Compile Include="Public Methods\IsNotNull.cs" />
     <Compile Include="Public Methods\DoesNotReachHere.cs" />
     <Compile Include="Public Methods\IsInEnum.cs" />
     <Compile Include="Private Methods\Count.cs" />
