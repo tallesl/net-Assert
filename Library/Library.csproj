@@ -7,8 +7,8 @@
     <ProjectGuid>{08FABB31-8D13-49EC-8B59-513A19B76FCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ThrowIf</RootNamespace>
-    <AssemblyName>ThrowIf</AssemblyName>
+    <RootNamespace>Assert</RootNamespace>
+    <AssemblyName>Assert</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -29,38 +29,39 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\ThrowIf.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Assert.xml</DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Exceptions\ShouldBeInCollectionException.cs" />
-    <Compile Include="Exceptions\ShouldntBeDefaultException.cs" />
-    <Compile Include="Exceptions\ShouldBeSingleException.cs" />
-    <Compile Include="Exceptions\ShouldntBeSingleException.cs" />
-    <Compile Include="Exceptions\ShouldntBeMoreException.cs" />
-    <Compile Include="Exceptions\ShouldntBeLessException.cs" />
-    <Compile Include="Exceptions\ShouldntBeEmptyException.cs" />
-    <Compile Include="Exceptions\ShouldntReachHereException.cs" />
-    <Compile Include="Exceptions\ShouldBeInEnumException.cs" />
-    <Compile Include="Exceptions\ShouldntBeNullException.cs" />
-    <Compile Include="IfNotSingle.cs" />
-    <Compile Include="IfSingle.cs" />
-    <Compile Include="Private\Default.cs" />
-    <Compile Include="IfDefault.cs" />
-    <Compile Include="IfNull.cs" />
-    <Compile Include="IfReachHere.cs" />
-    <Compile Include="IfNotInEnum.cs" />
-    <Compile Include="Private\Count.cs" />
-    <Compile Include="IfLess.cs" />
-    <Compile Include="IfMore.cs" />
-    <Compile Include="IfNotIn.cs" />
-    <Compile Include="IfEmpty.cs" />
-    <Compile Include="Throw.cs" />
+    <Compile Include="Exceptions\ShouldNotReachHereException.cs" />
+    <Compile Include="Public Methods\IsSingle.cs" />
+    <Compile Include="Public Methods\IsNotSingle.cs" />
+    <Compile Include="Private Methods\Default.cs" />
+    <Compile Include="Public Methods\IsNotDefault.cs" />
+    <Compile Include="Public Methods\IsNotNullMessage.cs" />
+    <Compile Include="Public Methods\DoesNotReachHere.cs" />
+    <Compile Include="Public Methods\IsInEnum.cs" />
+    <Compile Include="Private Methods\Count.cs" />
+    <Compile Include="Public Methods\HasMore.cs" />
+    <Compile Include="Public Methods\HasLess.cs" />
+    <Compile Include="Public Methods\IsIn.cs" />
+    <Compile Include="Public Methods\HasElements.cs" />
+    <Compile Include="Assert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

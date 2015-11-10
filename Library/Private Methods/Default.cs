@@ -1,8 +1,8 @@
-﻿namespace ThrowIf
+﻿namespace Assert
 {
     using System;
 
-    public static partial class Throw
+    public static partial class AssertThat
     {
         private static object Default<T>(T obj)
         {

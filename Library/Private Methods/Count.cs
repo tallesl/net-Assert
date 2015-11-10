@@ -1,17 +1,14 @@
-﻿namespace ThrowIf
+﻿namespace Assert
 {
     using System;
     using System.Collections;
 
-    public static partial class Throw
+    public static partial class AssertThat
     {
         private static int Count(IEnumerable enumerable)
         {
-            if (enumerable is ICollection)
-            {
-                return ((ICollection)enumerable).Count;
-            }
-            else
+            var collection = enumerable as ICollection;
+            if (collection == null)
             {
                 var count = 0;
                 var enumerator = enumerable.GetEnumerator();
@@ -27,6 +24,10 @@
                         disposable.Dispose();
                 }
                 return count;
+            }
+            else
+            {
+                return collection.Count;
             }
         }
     }
