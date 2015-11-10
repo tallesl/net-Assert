@@ -1,4 +1,4 @@
-﻿namespace Assert
+﻿namespace AssertLibrary
 {
     public static partial class AssertThat
     {

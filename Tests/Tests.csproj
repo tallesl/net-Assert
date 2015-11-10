@@ -7,7 +7,7 @@
     <ProjectGuid>{E6ECB130-2888-4FE2-996C-843E732B5E69}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Assert.Tests</RootNamespace>
+    <RootNamespace>AssertLibrary.Tests</RootNamespace>
     <AssemblyName>Assert.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

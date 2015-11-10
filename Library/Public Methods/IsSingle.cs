@@ -1,4 +1,4 @@
-﻿namespace Assert
+﻿namespace AssertLibrary
 {
     using System;
     using System.Collections;

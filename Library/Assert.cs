@@ -1,4 +1,4 @@
-﻿namespace Assert
+﻿namespace AssertLibrary
 {
     /// <summary>
     /// Asserts that some condition is met.

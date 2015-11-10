@@ -1,4 +1,4 @@
-﻿namespace Assert.Tests
+﻿namespace AssertLibrary.Tests
 {
     using PromptLibrary;
     using System;
