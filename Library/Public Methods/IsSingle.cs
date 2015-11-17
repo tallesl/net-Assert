@@ -12,7 +12,7 @@
         /// Asserts that the given collection have exactly one element.
         /// </summary>
         /// <param name="collection">Collection to check</param>
-        /// <param name="name">Variable name to include in the exception message (optional)</param>
+        /// <param name="name">Variable name to include in the error message (optional)</param>
         [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK."),
         SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "False positive.")]
         public static void IsSingle(IEnumerable collection, string name = null)

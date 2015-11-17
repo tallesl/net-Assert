@@ -13,7 +13,7 @@
         /// </summary>
         /// <param name="n">Number of elements to be less than</param>
         /// <param name="collection">Collection to check</param>
-        /// <param name="name">Variable name to include in the exception message (optional)</param>
+        /// <param name="name">Variable name to include in the error message (optional)</param>
         [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK."),
         SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", Justification = "That's OK."),
         SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "False positive."),]

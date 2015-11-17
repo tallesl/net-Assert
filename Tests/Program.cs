@@ -41,6 +41,10 @@
                     IsInEnum();
                     break;
 
+                case Methods.IsNegative:
+                    IsNegative();
+                    break;
+
                 case Methods.IsNotDefault:
                     IsNotDefault();
                     break;
@@ -51,6 +55,14 @@
 
                 case Methods.IsNotSingle:
                     IsNotSingle();
+                    break;
+
+                case Methods.IsNotZero:
+                    IsNotZero();
+                    break;
+
+                case Methods.IsPositive:
+                    IsPositive();
                     break;
 
                 case Methods.IsSingle:
@@ -132,6 +144,19 @@
             AssertThat.IsInEnum<Methods>(int.MaxValue);
         }
 
+        private static void IsNegative()
+        {
+            ValidNext();
+            AssertThat.IsNegative(-1);
+            AssertThat.IsNegative(-1L);
+            AssertThat.IsNegative(-1f);
+            AssertThat.IsNegative(-1d);
+            AssertThat.IsNegative(-1m);
+
+            InvalidNext();
+            AssertThat.IsNegative(1);
+        }
+
         private static void IsNotDefault()
         {
             ValidNext();
@@ -158,6 +183,32 @@
 
             InvalidNext();
             AssertThat.IsNotSingle(new[] { 1, });
+        }
+
+        private static void IsNotZero()
+        {
+            ValidNext();
+            AssertThat.IsNotZero(1);
+            AssertThat.IsNotZero(1L);
+            AssertThat.IsNotZero(1f);
+            AssertThat.IsNotZero(1d);
+            AssertThat.IsNotZero(1m);
+
+            InvalidNext();
+            AssertThat.IsNotZero(0);
+        }
+
+        private static void IsPositive()
+        {
+            ValidNext();
+            AssertThat.IsPositive(1);
+            AssertThat.IsPositive(1L);
+            AssertThat.IsPositive(1f);
+            AssertThat.IsPositive(1d);
+            AssertThat.IsPositive(1m);
+
+            InvalidNext();
+            AssertThat.IsPositive(-1);
         }
 
         private static void IsSingle()
