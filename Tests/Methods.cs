@@ -8,11 +8,13 @@
         HasMore,
         IsIn,
         IsInEnum,
+        IsLess,
         IsNegative,
         IsNotDefault,
         IsNotNullMessage,
         IsNotSingle,
         IsNotZero,
+        IsMore,
         IsPositive,
         IsSingle,
     }

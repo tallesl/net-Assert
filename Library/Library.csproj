@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\ShouldNotReachHereException.cs" />
+    <Compile Include="Public Methods\IsLess.cs" />
+    <Compile Include="Public Methods\IsMore.cs" />
     <Compile Include="Public Methods\IsNotZero.cs" />
     <Compile Include="Public Methods\IsNegative.cs" />
     <Compile Include="Public Methods\IsPositive.cs" />

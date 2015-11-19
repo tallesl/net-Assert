@@ -41,6 +41,10 @@
                     IsInEnum();
                     break;
 
+                case Methods.IsLess:
+                    IsLess();
+                    break;
+
                 case Methods.IsNegative:
                     IsNegative();
                     break;
@@ -59,6 +63,10 @@
 
                 case Methods.IsNotZero:
                     IsNotZero();
+                    break;
+
+                case Methods.IsMore:
+                    IsMore();
                     break;
 
                 case Methods.IsPositive:
@@ -144,6 +152,18 @@
             AssertThat.IsInEnum<Methods>(int.MaxValue);
         }
 
+        private static void IsLess()
+        {
+            ValidNext();
+            AssertThat.IsLess(-1, 0);
+            AssertThat.IsLess(1L, 2L);
+            AssertThat.IsLess(0f, 0.1f);
+            AssertThat.IsLess(0.05, 0.1);
+
+            InvalidNext();
+            AssertThat.IsLess(2, 1);
+        }
+
         private static void IsNegative()
         {
             ValidNext();
@@ -196,6 +216,18 @@
 
             InvalidNext();
             AssertThat.IsNotZero(0);
+        }
+
+        private static void IsMore()
+        {
+            ValidNext();
+            AssertThat.IsMore(0, -1);
+            AssertThat.IsMore(2L, 1L);
+            AssertThat.IsMore(0.1f, 0f);
+            AssertThat.IsMore(0.1, 0.05);
+
+            InvalidNext();
+            AssertThat.IsMore(1, 2);
         }
 
         private static void IsPositive()
