@@ -3,5 +3,5 @@
     /// <summary>
     /// Asserts that some condition is met.
     /// </summary>
-    public static partial class AssertThat { }
+    public static partial class Assert { }
 }

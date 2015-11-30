@@ -2,7 +2,7 @@
 {
     using System;
 
-    public static partial class AssertThat
+    public static partial class Assert
     {
         private static object Default<T>(T obj)
         {

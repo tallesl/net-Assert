@@ -110,7 +110,7 @@
         {
             try
             {
-                AssertThat.DoesNotReachHere();
+                Assert.DoesNotReachHere();
             }
             catch (ShouldNotReachHereException e)
             {
@@ -121,173 +121,173 @@
         private static void HasElements()
         {
             ValidNext();
-            AssertThat.HasElements(new[] { 1, });
+            Assert.HasElements(new[] { 1, });
 
             InvalidNext();
-            AssertThat.HasElements(new int[] { });
+            Assert.HasElements(new int[] { });
         }
 
         private static void HasExactly()
         {
             ValidNext();
-            AssertThat.HasExactly(3, new[] { 1, 2, 3, });
+            Assert.HasExactly(3, new[] { 1, 2, 3, });
 
             InvalidNext();
-            AssertThat.HasExactly(3, new[] { 1, 2, });
+            Assert.HasExactly(3, new[] { 1, 2, });
         }
 
         private static void HasLess()
         {
             ValidNext();
-            AssertThat.HasLess(3, new[] { 1, 2, });
+            Assert.HasLess(3, new[] { 1, 2, });
 
             InvalidNext();
-            AssertThat.HasLess(3, new[] { 1, 2, 3, });
+            Assert.HasLess(3, new[] { 1, 2, 3, });
         }
 
         private static void HasMore()
         {
             ValidNext();
-            AssertThat.HasMore(3, new[] { 1, 2, 3, 4, });
+            Assert.HasMore(3, new[] { 1, 2, 3, 4, });
 
             InvalidNext();
-            AssertThat.HasMore(3, new[] { 1, 2, 3, });
+            Assert.HasMore(3, new[] { 1, 2, 3, });
         }
 
         private static void IsFalse()
         {
             ValidNext();
-            AssertThat.IsFalse(false);
+            Assert.IsFalse(false);
 
             InvalidNext();
-            AssertThat.IsFalse(true);
+            Assert.IsFalse(true);
         }
 
         private static void IsIn()
         {
             ValidNext();
-            AssertThat.IsIn(3, new[] { 1, 2, 3, });
+            Assert.IsIn(3, new[] { 1, 2, 3, });
 
             InvalidNext();
-            AssertThat.IsIn(3, new[] { 1, 2, });
+            Assert.IsIn(3, new[] { 1, 2, });
         }
 
         private static void IsInEnum()
         {
             ValidNext();
-            AssertThat.IsInEnum<Methods>(0);
+            Assert.IsInEnum<Methods>(0);
 
             InvalidNext();
-            AssertThat.IsInEnum<Methods>(int.MaxValue);
+            Assert.IsInEnum<Methods>(int.MaxValue);
         }
 
         private static void IsLess()
         {
             ValidNext();
-            AssertThat.IsLess(-1, 0);
-            AssertThat.IsLess(1L, 2L);
-            AssertThat.IsLess(0f, 0.1f);
-            AssertThat.IsLess(0.05, 0.1);
+            Assert.IsLess(-1, 0);
+            Assert.IsLess(1L, 2L);
+            Assert.IsLess(0f, 0.1f);
+            Assert.IsLess(0.05, 0.1);
 
             InvalidNext();
-            AssertThat.IsLess(2, 1);
+            Assert.IsLess(2, 1);
         }
 
         private static void IsNegative()
         {
             ValidNext();
-            AssertThat.IsNegative(-1);
-            AssertThat.IsNegative(-1L);
-            AssertThat.IsNegative(-1f);
-            AssertThat.IsNegative(-1d);
-            AssertThat.IsNegative(-1m);
+            Assert.IsNegative(-1);
+            Assert.IsNegative(-1L);
+            Assert.IsNegative(-1f);
+            Assert.IsNegative(-1d);
+            Assert.IsNegative(-1m);
 
             InvalidNext();
-            AssertThat.IsNegative(1);
+            Assert.IsNegative(1);
         }
 
         private static void IsNotDefault()
         {
             ValidNext();
-            AssertThat.IsNotDefault(Guid.NewGuid());
+            Assert.IsNotDefault(Guid.NewGuid());
 
             InvalidNext();
-            AssertThat.IsNotDefault(new Guid());
+            Assert.IsNotDefault(new Guid());
         }
 
         private static void IsNotNullMessage()
         {
             ValidNext();
-            AssertThat.IsNotNull(string.Empty);
+            Assert.IsNotNull(string.Empty);
 
             InvalidNext();
-            AssertThat.IsNotNull(null);
+            Assert.IsNotNull(null);
         }
 
         private static void IsNotSingle()
         {
             ValidNext();
-            AssertThat.IsNotSingle(new int[] { });
-            AssertThat.IsNotSingle(new[] { 1, 2, });
+            Assert.IsNotSingle(new int[] { });
+            Assert.IsNotSingle(new[] { 1, 2, });
 
             InvalidNext();
-            AssertThat.IsNotSingle(new[] { 1, });
+            Assert.IsNotSingle(new[] { 1, });
         }
 
         private static void IsNotZero()
         {
             ValidNext();
-            AssertThat.IsNotZero(1);
-            AssertThat.IsNotZero(1L);
-            AssertThat.IsNotZero(1f);
-            AssertThat.IsNotZero(1d);
-            AssertThat.IsNotZero(1m);
+            Assert.IsNotZero(1);
+            Assert.IsNotZero(1L);
+            Assert.IsNotZero(1f);
+            Assert.IsNotZero(1d);
+            Assert.IsNotZero(1m);
 
             InvalidNext();
-            AssertThat.IsNotZero(0);
+            Assert.IsNotZero(0);
         }
 
         private static void IsMore()
         {
             ValidNext();
-            AssertThat.IsMore(0, -1);
-            AssertThat.IsMore(2L, 1L);
-            AssertThat.IsMore(0.1f, 0f);
-            AssertThat.IsMore(0.1, 0.05);
+            Assert.IsMore(0, -1);
+            Assert.IsMore(2L, 1L);
+            Assert.IsMore(0.1f, 0f);
+            Assert.IsMore(0.1, 0.05);
 
             InvalidNext();
-            AssertThat.IsMore(1, 2);
+            Assert.IsMore(1, 2);
         }
 
         private static void IsPositive()
         {
             ValidNext();
-            AssertThat.IsPositive(1);
-            AssertThat.IsPositive(1L);
-            AssertThat.IsPositive(1f);
-            AssertThat.IsPositive(1d);
-            AssertThat.IsPositive(1m);
+            Assert.IsPositive(1);
+            Assert.IsPositive(1L);
+            Assert.IsPositive(1f);
+            Assert.IsPositive(1d);
+            Assert.IsPositive(1m);
 
             InvalidNext();
-            AssertThat.IsPositive(-1);
+            Assert.IsPositive(-1);
         }
 
         private static void IsSingle()
         {
             ValidNext();
-            AssertThat.IsSingle(new[] { 1, });
+            Assert.IsSingle(new[] { 1, });
 
             InvalidNext();
-            AssertThat.IsSingle(new[] { 1, 2, });
+            Assert.IsSingle(new[] { 1, 2, });
         }
 
         private static void IsTrue()
         {
             ValidNext();
-            AssertThat.IsTrue(true);
+            Assert.IsTrue(true);
 
             InvalidNext();
-            AssertThat.IsTrue(false);
+            Assert.IsTrue(false);
         }
     }
 }

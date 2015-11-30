@@ -1,6 +1,6 @@
 ﻿namespace AssertLibrary
 {
-    public static partial class AssertThat
+    public static partial class Assert
     {
         /// <summary>
         /// Throws ShouldntReachHereExeption.

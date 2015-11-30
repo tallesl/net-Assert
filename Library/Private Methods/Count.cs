@@ -3,7 +3,7 @@
     using System;
     using System.Collections;
 
-    public static partial class AssertThat
+    public static partial class Assert
     {
         private static int Count(IEnumerable enumerable)
         {

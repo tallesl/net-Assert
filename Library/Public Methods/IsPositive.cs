@@ -3,7 +3,7 @@
     using System.Diagnostics;
     using System.Globalization;
 
-    public static partial class AssertThat
+    public static partial class Assert
     {
         /// <summary>
         /// Asserts that the given number is positive.
