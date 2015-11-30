@@ -25,6 +25,10 @@
                     HasElements();
                     break;
 
+                case Methods.HasExactly:
+                    HasExactly();
+                    break;
+
                 case Methods.HasLess:
                     HasLess();
                     break;
@@ -114,6 +118,15 @@
 
             InvalidNext();
             AssertThat.HasElements(new int[] { });
+        }
+
+        private static void HasExactly()
+        {
+            ValidNext();
+            AssertThat.HasExactly(3, new[] { 1, 2, 3, });
+
+            InvalidNext();
+            AssertThat.HasExactly(3, new[] { 1, 2, });
         }
 
         private static void HasLess()

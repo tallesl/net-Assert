@@ -49,7 +49,9 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 }
 ```
 
-The helper can check unexpected [nulls], [places reach], [enum values], [default values], [less]/[more] than, [positive]/[negative]/[not zero] numbers and [empty]/[small]/[large]/[single]/[not single] collections.
+The helper can check unexpected [nulls], [places reach], [enum values], [default values],
+[less] than/[more] than/[exactly], [positive]/[negative]/[not zero] numbers and
+[empty]/[small]/[large]/[single]/[not single] collections.
 They all use [Debug.Assert] under the hood.
 
 [build]:          https://ci.appveyor.com/project/TallesL/Assert

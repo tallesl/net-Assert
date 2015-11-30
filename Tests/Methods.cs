@@ -4,6 +4,7 @@
     {
         DoesNotReachHere,
         HasElements,
+        HasExactly,
         HasLess,
         HasMore,
         IsIn,
