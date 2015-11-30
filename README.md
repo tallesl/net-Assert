@@ -34,13 +34,15 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 So now I do:
 
 ```cs
+using AssertLibrary;
+
 public Tile[] PaintTiles(Color color, Tile[] tiles)
 {
-    AssertThat.IsNotDefault(color);
-    AssertThat.IsInEnum<Color>(color);
+    Assert.IsNotDefault(color);
+    Assert.IsInEnum<Color>(color);
 
-    AssertThat.IsNotNull(tiles);
-    AssertThat.HasElements(tiles);
+    Assert.IsNotNull(tiles);
+    Assert.HasElements(tiles);
 
     foreach (var tile in tiles)
     {
@@ -63,7 +65,7 @@ They all use [Debug.Assert] under the hood.
 [enum values]:    Library/Public%20Methods/IsInEnum.cs
 [default values]: Library/Public%20Methods/IsNotDefault.cs
 [true]:           Library/Public%20Methods/IsTrue.cs
-[false]:          Library/Public%20Methods/IsFalse.
+[false]:          Library/Public%20Methods/IsFalse.cs
 [less]:           Library/Public%20Methods/IsLess.cs
 [more]:           Library/Public%20Methods/IsMore.cs
 [positive]:       Library/Public%20Methods/IsPositive.cs
