@@ -1,7 +1,7 @@
 # Assert
 
 [![][build-img]][build]
-[![][nuget-img]][nuget]
+[![][version-img]][version]
 
 Little helper on assertion.
 
@@ -58,8 +58,8 @@ They all use [Debug.Assert] under the hood.
 
 [build]:          https://ci.appveyor.com/project/TallesL/Assert
 [build-img]:      https://ci.appveyor.com/api/projects/status/github/tallesl/Assert
-[nuget]:          http://badge.fury.io/nu/Assert
-[nuget-img]:      https://badge.fury.io/nu/Assert.png
+[version]:        https://nuget.org/packages/Assert
+[version-img]:    https://badge.fury.io/nu/Assert.png
 [nulls]:          Library/Public%20Methods/IsNotNull.cs
 [places reach]:   Library/Public%20Methods/DoesNotReachHere.cs
 [enum values]:    Library/Public%20Methods/IsInEnum.cs
