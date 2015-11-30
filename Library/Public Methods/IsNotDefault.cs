@@ -11,8 +11,6 @@
         /// </summary>
         /// <param name="value">Object to check</param>
         /// <param name="name">Variable name to include in the assertion message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK."),
-        SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "False positive.")]
         public static void IsNotDefault<T>(T value, string name = null)
         {
             var defaultValue = Default<T>(value);
@@ -20,7 +18,6 @@
             Debug.Assert(isNotDefault, IsNotDefaultMessage(name));
         }
 
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "False positive.")]
         private static string IsNotDefaultMessage(string name)
         {
             return name == null ?

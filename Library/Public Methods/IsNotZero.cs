@@ -11,7 +11,6 @@
         /// </summary>
         /// <param name="n">Number to check if it's negative</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK.")]
         public static void IsNotZero(int n, string name = null)
         {
             Debug.Assert(n != 0, IsNotZeroMessage(name));
@@ -22,7 +21,6 @@
         /// </summary>
         /// <param name="n">Number to check if it's negative</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK.")]
         public static void IsNotZero(long n, string name = null)
         {
             Debug.Assert(n != 0, IsNotZeroMessage(name));
@@ -33,7 +31,6 @@
         /// </summary>
         /// <param name="n">Number to check if it's negative</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK.")]
         public static void IsNotZero(float n, string name = null)
         {
             Debug.Assert(n != 0, IsNotZeroMessage(name));
@@ -44,7 +41,6 @@
         /// </summary>
         /// <param name="n">Number to check if it's negative</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK.")]
         public static void IsNotZero(double n, string name = null)
         {
             Debug.Assert(n != 0, IsNotZeroMessage(name));
@@ -55,13 +51,11 @@
         /// </summary>
         /// <param name="n">Number to check if it's negative</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK.")]
         public static void IsNotZero(decimal n, string name = null)
         {
             Debug.Assert(n != 0, IsNotZeroMessage(name));
         }
 
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "False positive.")]
         private static string IsNotZeroMessage(string name)
         {
             return name == null ?

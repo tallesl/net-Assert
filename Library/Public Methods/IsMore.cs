@@ -11,8 +11,7 @@
         /// </summary>
         /// <param name="n">Number to check</param>
         /// <param name="than">Value to check against</param>
-        // <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK.")]
+        /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsMore(long n, long than, string name = null)
         {
             Debug.Assert(n > than, IsMoreMessage(name, n, than));
@@ -23,13 +22,12 @@
         /// </summary>
         /// <param name="n">Number to check</param>
         /// <param name="than">Value to check against</param>
-        // <param name="name">Variable name to include in the error message (optional)</param>
+        /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsMore(double n, double than, string name = null)
         {
             Debug.Assert(n > than, IsMoreMessage(name, n, than));
         }
 
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "False positive.")]
         private static string IsMoreMessage(string name, object n, object than)
         {
             return name == null ?

@@ -14,9 +14,6 @@
         /// <param name="n">Number of elements to be less than</param>
         /// <param name="collection">Collection to check</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK."),
-        SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", Justification = "That's OK."),
-        SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "False positive."),]
         public static void HasLess(int n, IEnumerable collection, string name = null)
         {
             if (collection == null)
@@ -26,7 +23,6 @@
             Debug.Assert(count < n, HasLessMessage(name, n, count));
         }
 
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "False positive.")]
         private static string HasLessMessage(string name, int n, int count)
         {
             return name == null ?

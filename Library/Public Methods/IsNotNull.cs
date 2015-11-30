@@ -11,14 +11,11 @@
         /// </summary>
         /// <param name="value">Object to check</param>
         /// <param name="name">Variable name to include in the error message (optional)</param>
-        [SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "That's OK."),
-        SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", Justification = "False positive.")]
         public static void IsNotNull(object value, string name = null)
         {
             Debug.Assert(value != null, IsNotNullMessage(name));
         }
 
-        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "False postive.")]
         private static string IsNotNullMessage(string name)
         {
             return name == null ?

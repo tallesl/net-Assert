@@ -3,6 +3,8 @@
     using System;
     using System.Collections;
     using System.Diagnostics;
+    using System.Globalization;
+    using System.Linq;
 
     public static partial class AssertThat
     {
@@ -21,7 +23,7 @@
                 if (item.Equals(value))
                     return;
             }
-            Debug.Assert(false, string.Format("Couldn't find the value \"{0}\" in the collection.", value));
+            Debug.Assert(false, string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the collection.", value));
         }
     }
 }
