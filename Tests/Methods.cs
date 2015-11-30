@@ -7,6 +7,7 @@
         HasExactly,
         HasLess,
         HasMore,
+        IsFalse,
         IsIn,
         IsInEnum,
         IsLess,
@@ -18,5 +19,6 @@
         IsMore,
         IsPositive,
         IsSingle,
+        IsTrue,
     }
 }

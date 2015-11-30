@@ -4,7 +4,6 @@
     using System.Collections;
     using System.Diagnostics;
     using System.Globalization;
-    using System.Linq;
 
     public static partial class AssertThat
     {

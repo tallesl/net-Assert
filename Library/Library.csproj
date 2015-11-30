@@ -54,6 +54,8 @@
     <Compile Include="Public Methods\IsNotZero.cs" />
     <Compile Include="Public Methods\IsNegative.cs" />
     <Compile Include="Public Methods\IsPositive.cs" />
+    <Compile Include="Public Methods\IsFalse.cs" />
+    <Compile Include="Public Methods\IsTrue.cs" />
     <Compile Include="Public Methods\IsSingle.cs" />
     <Compile Include="Public Methods\IsNotSingle.cs" />
     <Compile Include="Private Methods\Default.cs" />

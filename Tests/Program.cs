@@ -2,7 +2,6 @@
 {
     using PromptLibrary;
     using System;
-    using System.Linq;
 
     class Program
     {
@@ -35,6 +34,10 @@
 
                 case Methods.HasMore:
                     HasMore();
+                    break;
+
+                case Methods.IsFalse:
+                    IsFalse();
                     break;
 
                 case Methods.IsIn:
@@ -79,6 +82,10 @@
 
                 case Methods.IsSingle:
                     IsSingle();
+                    break;
+
+                case Methods.IsTrue:
+                    IsTrue();
                     break;
             }
 
@@ -145,6 +152,15 @@
 
             InvalidNext();
             AssertThat.HasMore(3, new[] { 1, 2, 3, });
+        }
+
+        private static void IsFalse()
+        {
+            ValidNext();
+            AssertThat.IsFalse(false);
+
+            InvalidNext();
+            AssertThat.IsFalse(true);
         }
 
         private static void IsIn()
@@ -263,6 +279,15 @@
 
             InvalidNext();
             AssertThat.IsSingle(new[] { 1, 2, });
+        }
+
+        private static void IsTrue()
+        {
+            ValidNext();
+            AssertThat.IsTrue(true);
+
+            InvalidNext();
+            AssertThat.IsTrue(false);
         }
     }
 }

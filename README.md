@@ -49,9 +49,9 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 }
 ```
 
-The helper can check unexpected [nulls], [places reach], [enum values], [default values],
-[less] than/[more] than/[exactly], [positive]/[negative]/[not zero] numbers and
-[empty]/[small]/[large]/[single]/[not single] collections.
+The helper can check unexpected [nulls], [places reach], [enum values], [default values], [true]/[false],
+[less]/[more] than, [positive]/[negative]/[not zero] numbers and
+[empty]/[small]/[large]/[single]/[not single]/[exactly] collections.
 They all use [Debug.Assert] under the hood.
 
 [build]:          https://ci.appveyor.com/project/TallesL/Assert
@@ -62,6 +62,8 @@ They all use [Debug.Assert] under the hood.
 [places reach]:   Library/Public%20Methods/DoesNotReachHere.cs
 [enum values]:    Library/Public%20Methods/IsInEnum.cs
 [default values]: Library/Public%20Methods/IsNotDefault.cs
+[true]:           Library/Public%20Methods/IsTrue.cs
+[false]:          Library/Public%20Methods/IsFalse.
 [less]:           Library/Public%20Methods/IsLess.cs
 [more]:           Library/Public%20Methods/IsMore.cs
 [positive]:       Library/Public%20Methods/IsPositive.cs
@@ -72,4 +74,5 @@ They all use [Debug.Assert] under the hood.
 [large]:          Library/Public%20Methods/HasMore.cs
 [single]:         Library/Public%20Methods/IsSingle.cs
 [not single]:     Library/Public%20Methods/IsNotSingle.cs
+[exactly]:        Library/Public%20Methods/HasExactly.cs
 [Debug.Assert]:   https://msdn.microsoft.com/library/System.Diagnostics.Debug.Assert
