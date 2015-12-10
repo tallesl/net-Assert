@@ -49,7 +49,9 @@
   <ItemGroup>
     <Compile Include="Exceptions\ShouldNotReachHereException.cs" />
     <Compile Include="Public Methods\HasExactly.cs" />
+    <Compile Include="Public Methods\IsNotEqual.cs" />
     <Compile Include="Public Methods\IsLess.cs" />
+    <Compile Include="Public Methods\IsEqual.cs" />
     <Compile Include="Public Methods\IsMore.cs" />
     <Compile Include="Public Methods\IsNotZero.cs" />
     <Compile Include="Public Methods\IsNegative.cs" />

@@ -36,6 +36,10 @@
                     HasMore();
                     break;
 
+                case Methods.IsEqual:
+                    IsEqual();
+                    break;
+
                 case Methods.IsFalse:
                     IsFalse();
                     break;
@@ -60,8 +64,12 @@
                     IsNotDefault();
                     break;
 
-                case Methods.IsNotNullMessage:
-                    IsNotNullMessage();
+                case Methods.IsNotEqual:
+                    IsNotEqual();
+                    break;
+
+                case Methods.IsNotNull:
+                    IsNotNull();
                     break;
 
                 case Methods.IsNotSingle:
@@ -154,6 +162,15 @@
             Assert.HasMore(3, new[] { 1, 2, 3, });
         }
 
+        private static void IsEqual()
+        {
+            ValidNext();
+            Assert.IsEqual(1, 1);
+
+            InvalidNext();
+            Assert.IsEqual(1, "1");
+        }
+
         private static void IsFalse()
         {
             ValidNext();
@@ -215,7 +232,16 @@
             Assert.IsNotDefault(new Guid());
         }
 
-        private static void IsNotNullMessage()
+        private static void IsNotEqual()
+        {
+            ValidNext();
+            Assert.IsNotEqual(1, "1");
+
+            InvalidNext();
+            Assert.IsNotEqual(1, 1);
+        }
+
+        private static void IsNotNull()
         {
             ValidNext();
             Assert.IsNotNull(string.Empty);

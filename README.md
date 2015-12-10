@@ -51,8 +51,7 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 }
 ```
 
-The helper can check unexpected [nulls], [places reach], [enum values], [default values], [true]/[false],
-[less]/[more] than, [positive]/[negative]/[not zero] numbers and
+The helper can check unexpected [nulls], [places reach], [enum values], [default values], [true]/[false], [equal]/[not equal], [less]/[more] than, [positive]/[negative]/[not zero] numbers and
 [empty]/[small]/[large]/[single]/[not single]/[exactly] collections.
 They all use [Debug.Assert] under the hood.
 
@@ -66,6 +65,8 @@ They all use [Debug.Assert] under the hood.
 [default values]: Library/Public%20Methods/IsNotDefault.cs
 [true]:           Library/Public%20Methods/IsTrue.cs
 [false]:          Library/Public%20Methods/IsFalse.cs
+[equal]:          Library/Public%20Methods/IsEqual.cs
+[not equal]:      Library/Public%20Methods/IsNotEqual.cs
 [less]:           Library/Public%20Methods/IsLess.cs
 [more]:           Library/Public%20Methods/IsMore.cs
 [positive]:       Library/Public%20Methods/IsPositive.cs
