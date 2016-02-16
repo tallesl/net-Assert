@@ -1,9 +1,14 @@
 # Assert
 
 [![][build-img]][build]
-[![][version-img]][version]
+[![][nuget-img]][nuget]
 
 Little helper on assertion.
+
+[build]:     https://ci.appveyor.com/project/TallesL/net-assert
+[build-img]: https://ci.appveyor.com/api/projects/status/github/tallesl/net-assert?svg=true
+[nuget]:     https://www.nuget.org/packages/Assert
+[nuget-img]: https://badge.fury.io/nu/Assert.svg
 
 ## Usage
 
@@ -51,14 +56,11 @@ public Tile[] PaintTiles(Color color, Tile[] tiles)
 }
 ```
 
-The helper can check unexpected [nulls], [places reach], [enum values], [default values], [true]/[false], [equal]/[not equal], [less]/[more] than, [positive]/[negative]/[not zero] numbers and
+The helper can check unexpected [nulls], [places reach], [enum values], [default values], [true]/[false],
+[equal]/[not equal], [less]/[more] than, [positive]/[negative]/[not zero] numbers and
 [empty]/[small]/[large]/[single]/[not single]/[exactly] collections.
 They all use [Debug.Assert] under the hood.
 
-[build]:          https://ci.appveyor.com/project/TallesL/Assert
-[build-img]:      https://ci.appveyor.com/api/projects/status/github/tallesl/Assert
-[version]:        https://nuget.org/packages/Assert
-[version-img]:    https://badge.fury.io/nu/Assert.png
 [nulls]:          Library/Public%20Methods/IsNotNull.cs
 [places reach]:   Library/Public%20Methods/DoesNotReachHere.cs
 [enum values]:    Library/Public%20Methods/IsInEnum.cs
