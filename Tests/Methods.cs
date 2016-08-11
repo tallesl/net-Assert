@@ -23,5 +23,6 @@
         IsSingle,
         IsTrue,
         PropertyExists,
+        IsOfType,
     }
 }

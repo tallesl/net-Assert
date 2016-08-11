@@ -99,6 +99,10 @@
                 case Methods.PropertyExists:
                     PropertyExists();
                     break;
+
+                case Methods.IsOfType:
+                    IsOfType();
+                    break;
             }
 
             #else
@@ -327,6 +331,15 @@
 
             InvalidNext();
             Assert.PropertyExists(new { Foo = "Bar" }, "Qux");
+        }
+
+        private static void IsOfType()
+        {
+            ValidNext();
+            Assert.IsOfType(typeof(object), 1);
+
+            InvalidNext();
+            Assert.IsOfType(typeof(string), 1);
         }
     }
 }

@@ -24,10 +24,10 @@
                 ((IDictionary<string, object>)value).ContainsKey(propertyName) :
                 type.GetProperty(propertyName) != null;
 
-            Debug.Assert(exists, PropertyExistsMessage(propertyName, variableName));
+            Debug.Assert(exists, PropertyExistsMessage(variableName, propertyName));
         }
 
-        private static string PropertyExistsMessage(string propertyName, string variableName)
+        private static string PropertyExistsMessage(string variableName, string propertyName)
         {
             return variableName == null ?
                 string.Format(CultureInfo.CurrentCulture, "\"{0}\" should exist at this point.", propertyName) :
