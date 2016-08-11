@@ -22,5 +22,6 @@
         IsPositive,
         IsSingle,
         IsTrue,
+        PropertyExists,
     }
 }

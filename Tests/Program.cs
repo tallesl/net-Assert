@@ -95,6 +95,10 @@
                 case Methods.IsTrue:
                     IsTrue();
                     break;
+
+                case Methods.PropertyExists:
+                    PropertyExists();
+                    break;
             }
 
             #else
@@ -314,6 +318,15 @@
 
             InvalidNext();
             Assert.IsTrue(false);
+        }
+
+        private static void PropertyExists()
+        {
+            ValidNext();
+            Assert.PropertyExists(new { Foo = "Bar" }, "Foo");
+
+            InvalidNext();
+            Assert.PropertyExists(new { Foo = "Bar" }, "Qux");
         }
     }
 }
