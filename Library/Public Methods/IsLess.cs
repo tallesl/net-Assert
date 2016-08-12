@@ -13,7 +13,7 @@
         /// <param name="variableName">Variable name to include in the error message (optional)</param>
         public static void IsLess(long n, long than, string variableName = null)
         {
-            Debug.Assert(n < than, IsLessMessage(variableName, n, than));
+            Check(n < than, IsLessMessage(variableName, n, than));
         }
 
         /// <summary>
