@@ -12,7 +12,8 @@
         /// </summary>
         /// <param name="value">Value to check if it's in the collection</param>
         /// <param name="collection">Collection to check if the value is in it</param>
-        public static void IsIn(object value, IEnumerable collection)
+        /// <param name="variableName">Variable name to include in the error message (optional)</param>
+        public static void IsIn(object value, IEnumerable collection, string variableName = null)
         {
             if (collection == null)
                 throw new ArgumentNullException("collection");
@@ -22,7 +23,14 @@
                 if (item.Equals(value))
                     return;
             }
-            Check(false, string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the collection.", value));
+            Check(false, IsInMessage(variableName, value));
+        }
+
+        private static string IsInMessage(string variableName, object value)
+        {
+            return variableName == null ?
+                string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the collection.", value) :
+                string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the collection \"{1}\".", value, variableName);
         }
     }
 }

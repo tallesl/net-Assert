@@ -9,17 +9,17 @@
         /// Asserts that the given object is null.
         /// </summary>
         /// <param name="value">Object to check</param>
-        /// <param name="name">Variable name to include in the error message (optional)</param>
-        public static void IsNotNull(object value, string name = null)
+        /// <param name="variableName">Variable name to include in the error message (optional)</param>
+        public static void IsNotNull(object value, string variableName = null)
         {
-            Check(value != null, IsNotNullMessage(name));
+            Check(value != null, IsNotNullMessage(variableName));
         }
 
-        private static string IsNotNullMessage(string name)
+        private static string IsNotNullMessage(string variableName)
         {
-            return name == null ?
+            return variableName == null ?
                 "Should have a value other then null at this point." :
-                string.Format(CultureInfo.CurrentCulture, "\"{0}\" should have a value other then null at this point.", name);
+                string.Format(CultureInfo.CurrentCulture, "\"{0}\" should have a value other then null at this point.", variableName);
         }
     }
 }

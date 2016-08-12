@@ -11,20 +11,20 @@
         /// Asserts that the given collection have exactly one element.
         /// </summary>
         /// <param name="collection">Collection to check</param>
-        /// <param name="name">Variable name to include in the error message (optional)</param>
-        public static void IsSingle(IEnumerable collection, string name = null)
+        /// <param name="variableName">Variable name to include in the error message (optional)</param>
+        public static void IsSingle(IEnumerable collection, string variableName = null)
         {
             if (collection == null)
                 throw new ArgumentNullException("collection");
 
-            Check(Count(collection) == 1, IsSingleMessage(name));
+            Check(Count(collection) == 1, IsSingleMessage(variableName));
         }
 
-        private static string IsSingleMessage(string name)
+        private static string IsSingleMessage(string variableName)
         {
-            return name == null ?
+            return variableName == null ?
                 "Shouldn't be single at this point." :
-                string.Format(CultureInfo.CurrentCulture, "\"{0}\" shouldnt't be single at this point.", name);
+                string.Format(CultureInfo.CurrentCulture, "\"{0}\" shouldnt't be single at this point.", variableName);
         }
     }
 }

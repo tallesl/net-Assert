@@ -9,17 +9,17 @@
         /// Asserts that the given flag is true.
         /// </summary>
         /// <param name="flag">Flag to check</param>
-        /// <param name="name">Variable name to include in the error message (optional)</param>
-        public static void IsTrue(bool flag, string name = null)
+        /// <param name="variableName">Variable name to include in the error message (optional)</param>
+        public static void IsTrue(bool flag, string variableName = null)
         {
-            Check(flag, IsTrueMessage(name));
+            Check(flag, IsTrueMessage(variableName));
         }
 
-        private static string IsTrueMessage(string name)
+        private static string IsTrueMessage(string variableName)
         {
-            return name == null ?
+            return variableName == null ?
                 "Shouldn't be true at this point." :
-                string.Format(CultureInfo.CurrentCulture, "\"{0}\" shouldn't be true at this point.", name);
+                string.Format(CultureInfo.CurrentCulture, "\"{0}\" shouldn't be true at this point.", variableName);
         }
     }
 }
