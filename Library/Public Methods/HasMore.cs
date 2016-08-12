@@ -19,7 +19,7 @@
                 throw new ArgumentNullException("collection");
 
             var count = Count(collection);
-            Debug.Assert(count > n, HasMoreMessage(name, n, count));
+            Check(count > n, HasMoreMessage(name, n, count));
         }
 
         private static string HasMoreMessage(string name, int n, int count)

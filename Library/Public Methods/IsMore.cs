@@ -13,7 +13,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsMore(long n, long than, string name = null)
         {
-            Debug.Assert(n > than, IsMoreMessage(name, n, than));
+            Check(n > than, IsMoreMessage(name, n, than));
         }
 
         /// <summary>
@@ -24,7 +24,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsMore(double n, double than, string name = null)
         {
-            Debug.Assert(n > than, IsMoreMessage(name, n, than));
+            Check(n > than, IsMoreMessage(name, n, than));
         }
 
         private static string IsMoreMessage(string name, object n, object than)

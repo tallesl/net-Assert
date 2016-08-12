@@ -12,7 +12,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsNotZero(int n, string name = null)
         {
-            Debug.Assert(n != 0, IsNotZeroMessage(name));
+            Check(n != 0, IsNotZeroMessage(name));
         }
 
         /// <summary>
@@ -22,7 +22,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsNotZero(long n, string name = null)
         {
-            Debug.Assert(n != 0, IsNotZeroMessage(name));
+            Check(n != 0, IsNotZeroMessage(name));
         }
 
         /// <summary>
@@ -32,7 +32,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsNotZero(float n, string name = null)
         {
-            Debug.Assert(n != 0, IsNotZeroMessage(name));
+            Check(n != 0, IsNotZeroMessage(name));
         }
 
         /// <summary>
@@ -42,7 +42,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsNotZero(double n, string name = null)
         {
-            Debug.Assert(n != 0, IsNotZeroMessage(name));
+            Check(n != 0, IsNotZeroMessage(name));
         }
 
         /// <summary>
@@ -52,7 +52,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsNotZero(decimal n, string name = null)
         {
-            Debug.Assert(n != 0, IsNotZeroMessage(name));
+            Check(n != 0, IsNotZeroMessage(name));
         }
 
         private static string IsNotZeroMessage(string name)

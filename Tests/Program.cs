@@ -7,6 +7,7 @@
     {
         static void Main(string[] args)
         {
+            Assert.UseException();
             Prompt.Title("Assert tests");
             Prompt.ClearBetweenSays();
 

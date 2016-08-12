@@ -17,7 +17,7 @@
             if (collection == null)
                 throw new ArgumentNullException("collection");
 
-            Debug.Assert(Count(collection) != 0, HasElementsMessage(name));
+            Check(Count(collection) != 0, HasElementsMessage(name));
         }
 
         private static string HasElementsMessage(string name)

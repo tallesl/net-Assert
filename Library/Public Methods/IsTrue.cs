@@ -12,7 +12,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsTrue(bool flag, string name = null)
         {
-            Debug.Assert(flag, IsTrueMessage(name));
+            Check(flag, IsTrueMessage(name));
         }
 
         private static string IsTrueMessage(string name)

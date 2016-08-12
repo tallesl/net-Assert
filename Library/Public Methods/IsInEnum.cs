@@ -17,7 +17,7 @@
                 throw new ArgumentNullException("value");
 
             var type = typeof(T);
-            Debug.Assert(Enum.IsDefined(type, value),
+            Check(Enum.IsDefined(type, value),
                 string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the enumeration \"{1}\".", value, type.Name));
         }
     }

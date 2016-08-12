@@ -20,7 +20,7 @@
             if (another == null)
                 throw new ArgumentNullException("another");
 
-            Debug.Assert(one.Equals(another), IsEqualMessage(name));
+            Check(one.Equals(another), IsEqualMessage(name));
         }
 
         private static string IsEqualMessage(string name)

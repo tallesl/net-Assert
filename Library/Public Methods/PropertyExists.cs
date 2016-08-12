@@ -24,7 +24,7 @@
                 ((IDictionary<string, object>)value).ContainsKey(propertyName) :
                 type.GetProperty(propertyName) != null;
 
-            Debug.Assert(exists, PropertyExistsMessage(variableName, propertyName));
+            Check(exists, PropertyExistsMessage(variableName, propertyName));
         }
 
         private static string PropertyExistsMessage(string variableName, string propertyName)

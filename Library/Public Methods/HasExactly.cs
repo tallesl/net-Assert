@@ -19,7 +19,7 @@
                 throw new ArgumentNullException("collection");
 
             var count = Count(collection);
-            Debug.Assert(count == n, HasExactlyMessage(name, n, count));
+            Check(count == n, HasExactlyMessage(name, n, count));
         }
 
         private static string HasExactlyMessage(string name, int n, int count)

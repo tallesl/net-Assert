@@ -17,7 +17,7 @@
             if (collection == null)
                 throw new ArgumentNullException("collection");
 
-            Debug.Assert(Count(collection) == 1, IsSingleMessage(name));
+            Check(Count(collection) == 1, IsSingleMessage(name));
         }
 
         private static string IsSingleMessage(string name)

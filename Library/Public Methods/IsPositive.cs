@@ -12,7 +12,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsPositive(int n, string name = null)
         {
-            Debug.Assert(n > 0, IsPositiveMessage(name));
+            Check(n > 0, IsPositiveMessage(name));
         }
 
         /// <summary>
@@ -22,7 +22,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsPositive(long n, string name = null)
         {
-            Debug.Assert(n > 0, IsPositiveMessage(name));
+            Check(n > 0, IsPositiveMessage(name));
         }
 
         /// <summary>
@@ -32,7 +32,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsPositive(float n, string name = null)
         {
-            Debug.Assert(n > 0, IsPositiveMessage(name));
+            Check(n > 0, IsPositiveMessage(name));
         }
 
         /// <summary>
@@ -42,7 +42,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsPositive(double n, string name = null)
         {
-            Debug.Assert(n > 0, IsPositiveMessage(name));
+            Check(n > 0, IsPositiveMessage(name));
         }
 
         /// <summary>
@@ -52,7 +52,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsPositive(decimal n, string name = null)
         {
-            Debug.Assert(n > 0, IsPositiveMessage(name));
+            Check(n > 0, IsPositiveMessage(name));
         }
 
         private static string IsPositiveMessage(string name)

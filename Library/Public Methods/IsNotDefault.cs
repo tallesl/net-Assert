@@ -14,7 +14,7 @@
         {
             var defaultValue = Default<T>(value);
             var isNotDefault = (defaultValue == null && value != null) || !defaultValue.Equals(value);
-            Debug.Assert(isNotDefault, IsNotDefaultMessage(name));
+            Check(isNotDefault, IsNotDefaultMessage(name));
         }
 
         private static string IsNotDefaultMessage(string name)

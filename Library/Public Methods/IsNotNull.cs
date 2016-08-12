@@ -12,7 +12,7 @@
         /// <param name="name">Variable name to include in the error message (optional)</param>
         public static void IsNotNull(object value, string name = null)
         {
-            Debug.Assert(value != null, IsNotNullMessage(name));
+            Check(value != null, IsNotNullMessage(name));
         }
 
         private static string IsNotNullMessage(string name)

@@ -22,7 +22,7 @@
                 if (item.Equals(value))
                     return;
             }
-            Debug.Assert(false, string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the collection.", value));
+            Check(false, string.Format(CultureInfo.CurrentCulture, "Couldn't find the value \"{0}\" in the collection.", value));
         }
     }
 }

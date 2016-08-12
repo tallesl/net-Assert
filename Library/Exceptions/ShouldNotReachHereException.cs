@@ -7,7 +7,7 @@
     /// Exception thrown when execution reaches a place in code that shouldn't.
     /// </summary>
     [Serializable]
-    public class ShouldNotReachHereException : Exception
+    public class ShouldNotReachHereException : AssertException
     {
         /// <summary>
         /// Ctor.

@@ -31,7 +31,7 @@
             if (value == null)
                 throw new ArgumentNullException("value");
 
-            Debug.Assert(type.IsAssignableFrom(value.GetType()), IsOfTypeMessage(variableName, type));
+            Check(type.IsAssignableFrom(value.GetType()), IsOfTypeMessage(variableName, type));
         }
 
         private static string IsOfTypeMessage(string variableName, Type type)

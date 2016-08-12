@@ -19,7 +19,7 @@
                 throw new ArgumentNullException("collection");
 
             var count = Count(collection);
-            Debug.Assert(count < n, HasLessMessage(name, n, count));
+            Check(count < n, HasLessMessage(name, n, count));
         }
 
         private static string HasLessMessage(string name, int n, int count)
