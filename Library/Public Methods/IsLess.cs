@@ -24,7 +24,7 @@
         /// <param name="variableName">Variable name to include in the error message (optional)</param>
         public static void IsLess(double n, double than, string variableName = null)
         {
-            Debug.Assert(n < than, IsLessMessage(variableName, n, than));
+            Check(n < than, IsLessMessage(variableName, n, than));
         }
 
         private static string IsLessMessage(string variableName, object n, object than)
