@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="IsInEnum.cs" />
     <Compile Include="IsNotNull.cs" />
+    <Compile Include="IsNotNullOrWhiteSpace.cs" />
     <Compile Include="IsNotSingle.cs" />
     <Compile Include="IsNotZero.cs" />
     <Compile Include="IsMore.cs" />
