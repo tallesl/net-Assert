@@ -50,6 +50,7 @@
     <Compile Include="Exceptions\AssertException.cs" />
     <Compile Include="Exceptions\ShouldNotReachHereException.cs" />
     <Compile Include="Public Methods\HasExactly.cs" />
+    <Compile Include="Public Methods\IsNotNullOrWhiteSpace.cs" />
     <Compile Include="Public Methods\IsOfType.cs" />
     <Compile Include="Public Methods\PropertyExists.cs" />
     <Compile Include="Public Methods\IsNotEqual.cs" />
